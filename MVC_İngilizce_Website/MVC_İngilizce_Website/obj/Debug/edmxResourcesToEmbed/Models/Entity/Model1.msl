@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MVC_English_DatabaseModelStoreContainer" CdmEntityContainer="MVC_English_DatabaseEntities">
+    <EntitySetMapping Name="GirisTablosu">
+      <EntityTypeMapping TypeName="MVC_English_DatabaseModel.GirisTablosu">
+        <MappingFragment StoreEntitySet="GirisTablosu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="İletisimTablosu">
+      <EntityTypeMapping TypeName="MVC_English_DatabaseModel.İletisimTablosu">
+        <MappingFragment StoreEntitySet="İletisimTablosu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UygulamaTablosu">
+      <EntityTypeMapping TypeName="MVC_English_DatabaseModel.UygulamaTablosu">
+        <MappingFragment StoreEntitySet="UygulamaTablosu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Fiil" ColumnName="Fiil" />
+          <ScalarProperty Name="Cumleler" ColumnName="Cumleler" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

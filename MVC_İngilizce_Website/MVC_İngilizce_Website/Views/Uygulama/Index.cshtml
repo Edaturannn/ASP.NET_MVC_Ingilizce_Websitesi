@@ -1,0 +1,41 @@
+﻿@using MVC_İngilizce_Website.Models.Entity
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<UygulamaTablosu>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="container">
+    <br />
+    <br />
+    <h1>
+        Welcome To The Teacher Page
+    </h1>
+    <br />
+    <table class="table table-hover">
+        <tr>
+            <th>Verbs</th>
+            <th>Meaning</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Fiil</td>
+                <td>@item.Cumleler</td>
+                <td><a href="/Uygulama/UygulamaGetir/@item.ID" class="btn btn-warning">Update</a></td>
+                <td><a href="/Uygulama/Sil/@item.ID" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+    </table>
+    <br />
+    @Html.PagedListPager((IPagedList)Model,sayfa=>Url.Action("Index",new { sayfa }))
+    <br />
+    <a href="/Uygulama/Ekle" class="btn btn-info">Add</a>
+    <br />
+    <br />
+</div>
+

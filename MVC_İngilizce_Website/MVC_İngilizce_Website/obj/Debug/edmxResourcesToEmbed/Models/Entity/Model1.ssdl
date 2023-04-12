@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVC_English_DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="GirisTablosu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Sifre" Type="varchar" MaxLength="50" />
+    <Property Name="Rol" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="İletisimTablosu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adi" Type="varchar" MaxLength="50" />
+    <Property Name="Soyadi" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Mesaj" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="UygulamaTablosu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fiil" Type="varchar" MaxLength="50" />
+    <Property Name="Cumleler" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="MVC_English_DatabaseModelStoreContainer">
+    <EntitySet Name="GirisTablosu" EntityType="Self.GirisTablosu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="İletisimTablosu" EntityType="Self.İletisimTablosu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UygulamaTablosu" EntityType="Self.UygulamaTablosu" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
